@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  min-height: 20vh;
+}
+
+.main {
+  min-height: 75vh;
+}
+
+.footer {
+  min-height: 5vh;
+}
+
+.a {
+  text-decoration: none;
+}
