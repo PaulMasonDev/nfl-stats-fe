@@ -7,7 +7,8 @@ import { PlayerPage } from "./components/content/PlayerPage";
 import { AdminControls } from "./components/content/AdminControls";
 import axios from "axios";
 import { useEffect } from "react";
-import { API_KEY } from "./constants";
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 function App() {
   useEffect(() => {
