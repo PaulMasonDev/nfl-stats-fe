@@ -18,6 +18,7 @@ function App() {
       const { data: mostRecentWeek } = await axios.get(
         `https://api.sportsdata.io/v3/nfl/scores/json/LastCompletedWeek?key=${API_KEY}`
       );
+      console.log({ mostRecentWeek });
       const { data: playerStatsForMostRecentWeek } = await axios.get(
         `https://api.sportsdata.io/v3/nfl/stats/json/PlayerSeasonStats/${currentSeason}?key=${API_KEY}`
       );
