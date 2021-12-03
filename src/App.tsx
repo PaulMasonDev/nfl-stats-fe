@@ -5,30 +5,8 @@ import { Header } from "./components/header/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { PlayerPage } from "./components/content/PlayerPage";
 import { AdminControls } from "./components/content/AdminControls";
-import axios from "axios";
-import { useEffect } from "react";
-
-const API_KEY = process.env.REACT_APP_API_KEY;
 
 function App() {
-  useEffect(() => {
-    const fetchData = async () => {
-      const { data: currentSeason } = await axios.get(
-        `https://api.sportsdata.io/v3/nfl/scores/json/CurrentSeason?key=${API_KEY}`
-      );
-      const { data: mostRecentWeek } = await axios.get(
-        `https://api.sportsdata.io/v3/nfl/scores/json/LastCompletedWeek?key=${API_KEY}`
-      );
-      console.log({ mostRecentWeek });
-      const { data: playerStatsForMostRecentWeek } = await axios.get(
-        `https://api.sportsdata.io/v3/nfl/stats/json/PlayerSeasonStats/${currentSeason}?key=${API_KEY}`
-      );
-      console.log({ playerStatsForMostRecentWeek });
-    };
-
-    fetchData();
-  }, []);
-
   return (
     <div className="App">
       <Router>

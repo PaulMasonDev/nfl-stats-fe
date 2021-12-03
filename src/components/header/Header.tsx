@@ -25,7 +25,7 @@ const useStyles: any = makeStyles({
 export const Header = () => {
   const location = useLocation();
   const classes = useStyles();
-  console.log({ location });
+
   return (
     <Grid container direction="column">
       <Grid item xs={12}>
